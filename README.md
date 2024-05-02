@@ -30,9 +30,10 @@ But our solution goes beyond mere inventory management. Leveraging the power of 
 [![Foodwaste Hack walk through](https://img.youtube.com/vi/I6MvPD-cXrI/0.jpg)](https://www.youtube.com/watch?v=I6MvPD-cXrI)
 
 ## Setting up the Power Platform Solution
+
 Download and Import Solution:
 
-Begin by downloading the [FoodFightersSLN solution file](https://github.com/AllgeierSchweiz/aihackers/raw/main/PowerApp/FoodFightersSLN_1_0_0_12.zip) provided.
+Begin by downloading the [Megapatito FoodFightersSLN solution file](https://github.com/OzDoll/Megapatito-Foodwaste-App/blob/main/PowerApp/FoodFightersSLN_1_0_0_14.zip) provided.
 Navigate to Power Apps and log in to your account.
 Locate the option to import a solution and upload the downloaded FoodFightersSLN file.
 Follow the on-screen prompts to complete the import process.
@@ -46,12 +47,14 @@ After importing the solution, set up connections and sure that credentials are c
 Create Fabric Enabled Workspace:
 
 Navigate to https://app.powerbi.com and create a new fabric enabled workspace.
+
 ![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/d339a1c5-4516-4519-8d4a-bd1538c11e58)
 
 
 Set Up A Lakehouse:
 
 Within the fabric enabled workspace, create a lakehouse to serve as a storage repository for imported data.
+
 ![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/e16ed2f2-9967-4c64-bb27-f8a953f3d835)
 
 Run Initial Load:
@@ -59,6 +62,7 @@ Run Initial Load:
 Add the provided py_loadproducts notebook to the newly created lakehouse.
 Execute the notebook to start the initial data load process from Open Food Facts.
 This process populates the database with essential product information.
+
 ![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/09ceb4b0-9c66-40d0-8e0f-076936a49123)
 
 Handle Fridge Inventory Data:
@@ -69,17 +73,20 @@ This notebook facilitates the processing and integration of incoming data from t
 Scan and Send Products:
 
 Begin utilizing the fridge inventory application to scan products and transmit relevant information to the designated lakehouse.
+
 ![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/0d12325a-eba3-4424-86f8-5f3ca21ef0b5)
 
 Build Semantic Model:
 
 With the data successfully imported into the lakehouse, proceed to construct a semantic model.
+
 ![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/7a97dbdb-4744-4da9-abb4-0e699fdebf34)
 
 Calculate Expiry Dates:
 
 Within the semantic model, add a DAX expression to calculate the number of days remaining before each product's expiration.
 For example:Expires in x Days = DATEDIFF(TODAY(),Min(fridgecontents[expirydate]),DAY)
+
 ![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/622b3ce5-ba22-4e1f-a80d-8deb1329732a)
 
 Create Fridge Inventory Report:
@@ -95,12 +102,12 @@ Set up Data Activator reflex to automate responses based on predefined condition
 Create custom action:
 
 Define a custom action within the reflex to initiate the GetRecipeOpenAI_Flow when your products are getting closer to their expiration date. Copy paste the connection string for the action and add replace the current value for the Trigger action within that flow. 
+
 ![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/c4c63202-c114-4be4-8b2e-4a4c1cae06d9)
 
 Add Connection Details:
 
 If you haven't configured the connection reference details for the Food Fighter SLN yet you should now add keyvault credentials to the keyvault that holds your OpenAI api-key (if you have no keyvault configured yet you should set it up and add the api-key to it) and the connection to your outlook to send the recipe mail. 
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
