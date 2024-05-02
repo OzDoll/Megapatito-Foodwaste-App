@@ -1,8 +1,13 @@
 <a name="readme-top"></a>
 
 <!-- ABOUT THE PROJECT -->
-# Using Fabric and AI to combat Food Waste
-## Introduction to the Megapatito Food Waste Project
+# Using Fabric and Megapatito AI to combat Food Waste
+
+<p align="center">
+  <img src="https://i.imgur.com/f4G04lV.png">
+</p>
+
+## Introduction to the Megapatito Food Waste Bootcamp
 
 * The Use Case
 * Architecture overview
