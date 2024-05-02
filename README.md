@@ -7,30 +7,30 @@
   <img src="https://i.imgur.com/f4G04lV.png">
 </p>
 
-## Introduction to the Megapatito Food Waste Bootcamp
+## Intro to the Megapatito Food Waste Bootcamp
 
-* The Use Case
+* Use Case
 * Architecture overview
 * Setting up fabric
 * Setting up the Power Platform Solution
 * How to test
 
 <!-- GETTING STARTED -->
-## The Use Case
+## Use Case
 
-Introducing our innovative Food Fighters solution, aimed at combatting food waste: a seamless integration of Azure Open AI, Power Apps, Fabric Lakehouses, and Notebooks and much more. Our solution empowers users to effortlessly manage their food inventory, track expiration dates, and receive personalized recipe suggestions via email, all with the simple scan of a product.
+Introducing the Food Fighters solution, aimed at combatting food waste: a seamless integration of Azure Open AI, Power Apps, Fabric Lakehouses, and Notebooks and much more. The solution empowers users to effortlessly manage their food inventory, track expiration dates, and receive personalized recipe suggestions via email, all with the scan of a product.
 
-Imagine the convenience of scanning each item you purchase and instantly generating a comprehensive fridge inventory. With our solution, keeping track of expiration dates becomes a breeze, eliminating the frustration of discovering forgotten items wasting away at the back of the fridge.
+Imagine the convenience of scanning each item you purchase and instantly generating a comprehensive fridge inventory. The solution, keeping track of expiration dates becomes a breeze, eliminating the frustration of discovering forgotten items wasting away at the back of the fridge.
 
-But our solution goes beyond mere inventory management. Leveraging the power of AI, it analyzes your inventory and proactively suggests delicious recipes tailored to the items nearing their expiration dates. Say goodbye to wasted food and hello to inspired culinary adventures!
+The application goes beyond mere inventory management. Leveraging the power of AI, it analyzes your inventory and proactively suggests delicious recipes tailored to the items nearing their expiration dates. Say goodbye to wasted food and hello to inspired culinary adventures.
 
-## Architecture overview
+## Architecture Overview
 
 <img src="images/Fabric_AI_Food_Waste_Architecture.jpg" width="1000"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## End to End Setup walkthrough
+## End to end Walkthrough
 
 [![Foodwaste Hack walk through](https://img.youtube.com/vi/I6MvPD-cXrI/0.jpg)](https://www.youtube.com/watch?v=I6MvPD-cXrI)
 
@@ -48,7 +48,7 @@ Set Up Connections:
 After importing the solution, set up connections and sure that credentials are correctly configured (Keyvault, Outlook, Reflex Trigger).  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Setting up fabric
+## Setting up Fabric
 Create Fabric Enabled Workspace:
 
 Navigate to https://app.powerbi.com and create a new fabric enabled workspace.
@@ -116,7 +116,7 @@ If you haven't configured the connection reference details for the Food Fighter 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## How to test
+## How to Test
 
 After setting up the credentials as mentioned above the FoodFighter solution will be ready to use. Download the PowerApps App to your phone and open the FoodFighters App within PowerApps. Scan the barcode some food that you would like to add to your fridge. Select Log Product and wait a couple of minutes. You can now refresh Fridge Inventory lakehouse you created before and check the inventory table for the product you scanned.
 
@@ -136,5 +136,6 @@ The following documentation was used to source the information contained in this
 * [Fabric Global AI Hack](https://github.com/microsoft/Hack-Together-Fabric-AI)
 * [Fabric Tutorials](https://learn.microsoft.com/en-us/fabric/get-started/end-to-end-tutorials)
 * [Fabric Open AI How To Guide](https://learn.microsoft.com/en-us/fabric/data-science/ai-services/how-to-use-openai-sdk-synapse?tabs=python)
+* Application based upon [AllgeierSchweiz Power App](https://github.com/AllgeierSchweiz/aihackers)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
